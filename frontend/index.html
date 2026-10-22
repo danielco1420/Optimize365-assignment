@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who's that Pokémon?</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Who's that Pokémon?</h1>
+      <button id="fetch-button" type="button">Fetch a random Pokémon</button>
+      <section id="result" hidden>
+        <p id="status"></p>
+        <img id="pokemon-image" alt="" hidden />
+        <form id="guess-form" hidden>
+          <input
+            id="guess-input"
+            type="text"
+            autocomplete="off"
+            placeholder="Enter your guess"
+            aria-label="Pokémon name guess"
+          />
+          <button type="submit">Submit</button>
+        </form>
+        <p id="guess-feedback" hidden></p>
+        <h2 id="pokemon-name" hidden></h2>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

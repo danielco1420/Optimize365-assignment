@@ -1,0 +1,14 @@
+{
+  "name": "optimize365-assignment",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "app": "concurrently -n backend,frontend -c blue,green \"npm run start -w backend\" \"npm run start -w frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

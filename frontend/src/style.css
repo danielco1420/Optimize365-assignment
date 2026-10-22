@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+}
+
+#fetch-button {
+  width: min(90vw, 640px);
+  height: 180px;
+  border: 0;
+  border-radius: 24px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#fetch-button:hover {
+  background: #7dd3fc;
+}
+
+#fetch-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+#result {
+  width: min(90vw, 640px);
+  background: #e2e8f0;
+  color: #0f172a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+#pokemon-image {
+  width: min(100%, 320px);
+}
+
+#pokemon-image.silhouette {
+  filter: brightness(0);
+}
+
+#guess-form {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+#guess-input {
+  flex: 1;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #94a3b8;
+  border-radius: 10px;
+}
+
+#guess-form button {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #f8fafc;
+  cursor: pointer;
+}
+
+#guess-feedback.correct {
+  color: #15803d;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#guess-feedback.incorrect {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#pokemon-name {
+  margin: 0;
+  font-size: 2rem;
+}
+
+#status {
+  margin: 0;
+}
